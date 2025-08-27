@@ -1,0 +1,14 @@
+{
+   "files": [],
+  "references": [
+    {
+      "path": "./package.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+}
