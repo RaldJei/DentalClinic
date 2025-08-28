@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from "@/components/ui/button"
 import  LoginPage  from './pages/login/LoginPage'
+import Dashboard from './pages/login/Dasboard'
 
 function App() {
 
 
   return (
    
-      <LoginPage/>
+      <Dashboard/>
     
   )
 }
