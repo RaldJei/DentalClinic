@@ -13,7 +13,7 @@ export  function NavMain({
   items
 }) {
 
- const currentUrl = window.location.href;
+
   const path = window.location.pathname;
 
   return (
@@ -24,8 +24,12 @@ export  function NavMain({
         </SidebarMenu>
         <SidebarMenu>
           {items.map((item) => (
-            <SidebarMenuItem key={item.title} className={path === item.url ? "bg-accent text-accent-foreground" : ""}>
-              <SidebarMenuButton tooltip={item.title} 
+            <SidebarMenuItem key={item.title} className={path === item.url ? "bg-sky-500/10 text-accent-foreground" : ""}>
+              <SidebarMenuButton 
+                 tooltip={item.title}
+                 onClick={() => { 
+                  window.location.href = item.url;
+                 }}
                  >
                 {item.icon && <item.icon />}
                 <span>{item.title}</span>

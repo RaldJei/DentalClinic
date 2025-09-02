@@ -45,8 +45,8 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Patient Records",
-      url: "/patient-records",
+      title: "Patient",
+      url: "/patient",
       icon: IconListDetails,
     },
     {

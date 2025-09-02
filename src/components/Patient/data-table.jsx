@@ -92,6 +92,8 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 
+import {RegisterPatient}  from "@/components/Patient/register-patient"
+
 export const schema = z.object({
   id: z.number(),
   header: z.string(),
@@ -385,7 +387,7 @@ export function DataTable({
             <SelectValue placeholder="Select a view" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="outline">Outline</SelectItem>
+            <SelectItem value="outline">Patient Information</SelectItem>
             <SelectItem value="past-performance">Past Performance</SelectItem>
             <SelectItem value="key-personnel">Key Personnel</SelectItem>
             <SelectItem value="focus-documents">Focus Documents</SelectItem>
@@ -393,7 +395,7 @@ export function DataTable({
         </Select>
         <TabsList
           className="**:data-[slot=badge]:bg-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
-          <TabsTrigger value="outline">Outline</TabsTrigger>
+          <TabsTrigger value="outline">Patient Information</TabsTrigger>
           <TabsTrigger value="past-performance">
             Past Performance <Badge variant="secondary">3</Badge>
           </TabsTrigger>
@@ -433,10 +435,8 @@ export function DataTable({
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" size="sm">
-            <IconPlus />
-            <span className="hidden lg:inline">Add Section</span>
-          </Button>
+           <RegisterPatient/>
+       
         </div>
       </div>
       <TabsContent
@@ -594,7 +594,9 @@ function TableCellViewer({
   const isMobile = useIsMobile()
 
   return (
+
     <Drawer direction={isMobile ? "bottom" : "right"}>
+       
       <DrawerTrigger asChild>
         <Button variant="link" className="text-foreground w-fit px-0 text-left">
           {item.header}
