@@ -8,7 +8,7 @@ import './App.css'
 import { Button } from "@/components/ui/button"
 import  LoginPage  from './pages/login/LoginPage'
 import Dashboard from './pages/Dasboard'
-import Patient from './pages/Patient'
+import Patient from './pages/Patient/Patient'
 
 function App() {
 

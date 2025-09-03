@@ -12,8 +12,6 @@ import data from "@/app/dashboard/data.json"
 
 export default function Patient() {
   return (
-
-    
     <SidebarProvider
       style={
         {
